@@ -1,6 +1,7 @@
 <?php
+const DBLOGIN_INI = "../dblogin.ini";
+
 function open_database() {
-  const DBLOGIN_INI = "../dblogin.ini";
   require(DBLOGIN_INI);
   $ini_arr = parse_ini_file(DBLOGIN_INI);
 
