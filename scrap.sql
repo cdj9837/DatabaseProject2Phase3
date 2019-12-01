@@ -6,7 +6,9 @@
 -- Generation Time: Nov 28, 2019 at 12:17 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
-
+DROP DATABASE IF EXISTS scraplunch;
+CREATE DATABASE scraplunch;
+USE scraplunch;
 
 DROP TABLE IF EXISTS parttime;
 DROP TABLE IF EXISTS technician;
