@@ -8,7 +8,9 @@ function open_database() {
   if (!$ini_arr)
     die('E: Could not parse .ini file for database credentials');
 
-  $pdo = new PDO($ini_arr["name"], $ini_arr["hostname"], $ini_arr["username"], 
+  $pdo = new PDO(
+    'mysql:host='.$ini_arr["host"].';dbname='.$ini_arr["name"],
+    $ini_arr["user"],
     $ini_arr["password"]);
 
   if (!$pdo)
