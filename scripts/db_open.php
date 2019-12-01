@@ -1,21 +1,14 @@
 <?php
-const DBLOGIN_INI = "../dblogin.ini";
 
 function open_database() {
-  require(DBLOGIN_INI);
-  $ini_arr = parse_ini_file(DBLOGIN_INI);
+  $host = 'localhost';
+  $dbname = 'scraplunch';
+  $dbuser = 'root';
 
-  if (!$ini_arr)
-    die('E: Could not parse .ini file for database credentials');
-
-  $pdo = new PDO(
-    'mysql:host='.$ini_arr["host"].';dbname='.$ini_arr["name"],
-    $ini_arr["user"],
-    $ini_arr["password"]);
+  $pdo = new PDO('mysql:host='.$host.';dbname='.$dbname, $dbuser, NULL);
 
   if (!$pdo)
-    die('E: Could not connect to database\n'.$pdo->ErrorInfo()[2]);
+    die('E: Could not connect to database'.PHP_EOL.$pdo->ErrorInfo()[2]);
   else return $pdo;
 }
 ?>
-
