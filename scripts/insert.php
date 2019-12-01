@@ -9,9 +9,9 @@ $fname = filter_input(INPUT_POST, 'Fname');
 $lname = filter_input(INPUT_POST, 'Lname');
 $location = filter_input(INPUT_POST, 'Location');
 $job = filter_input(INPUT_POST, 'Job');
+$scrap_id = filter_input(INPUT_POST, 'ScrapId');
 
-// FIXME: Removed Job, Null MgrSSN placeholder, may not be valid query anymore
-$query = "INSERT INTO employee VALUES (?, ?, ?, ?)";
+$query = 'INSERT INTO employee VALUES (?, ?, ?, ?, ?)';
 
 $sql = $conn->prepare($query);
 if (!$sql)
@@ -21,6 +21,7 @@ else {
   $sql->bindValue(2, $fname);
   $sql->bindValue(3, $lname);
   $sql->bindValue(4, $location);
+  $sql->bindValue(5, $scrap_id);
 
   $result = $sql->execute();
   if (!$result)

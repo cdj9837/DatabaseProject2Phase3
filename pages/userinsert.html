@@ -1,28 +1,36 @@
 <html>
-<head>
-<title> Employee Insert Query </title>
-</head>
-<body>
-<form method="post" action="../scripts/insert.php">
-    <fieldset>
-      <legend> <strong> Employee Insert Query </strong> </legend>
+  <head>
+    <title> Employee Insert Query </title>
+  </head>
+  <body>
+    <form method="post" action="../scripts/insert.php">
+      <fieldset>
+        <legend> <strong> Employee Insert Query </strong> </legend>
 
-<label id="label" for=“SSN"> SSN </label> </br>
-<input type="text" name="SSN" required> </br> </br>
+        <label for=“SSN">SSN</label></br>
+        <input type="text" name="SSN" maxlength="9" required/></br></br>
 
-<label id="label" for=“Fname"> First Name </label> </br>
-<input type="text" name="Fname" required> </br> </br>
+        <label for=“Fname">First Name</label></br>
+        <input type="text" name="Fname" maxlength="20" required/></br></br>
 
-<label id="label" for=“Lname"> Last Name </label> </br>
-<input type="text" name="Lname" required> </br> </br>
+        <label for=“Lname">Last Name</label></br>
+        <input type="text" name="Lname" maxlength="20" required/></br></br>
 
-<label id="label" for=“Location"> Street Number and Street Name </label> </br>
-<input type="text" name="Location" required> </br> </br>
+        <label for=“Location">Street Number and Street Name</label></br>
+        <input type="text" name="Location" maxlength="20" required/></br></br>
 
-<label id="label" for=“Job"> Job Title </label> </br>
-<input type="text" name="Job" required> </br> </br>
-
-     <input id="button" type="submit" name="submit">
-   </fieldset>
-</body>
+        <label for="ScrapId">Scrap Lunch Location</label><br>
+        <select name="ScrapId" required>
+          <option value="placeholder">Placeholder, NA</option>
+          <option value="placeholder">Placeholder, NA</option>
+          <option value="placeholder">Placeholder, NA</option>
+          <option value="placeholder">Placeholder, NA</option>
+          <option value="placeholder">Placeholder, NA</option>
+          <option value="placeholder">Placeholder, NA</option>
+          <option value="placeholder">Placeholder, NA</option>
+        </select><br><br>
+        <input type="submit"/>
+        <input type="reset"/>
+      </fieldset>
+  </body>
 </html>

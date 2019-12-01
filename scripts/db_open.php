@@ -18,3 +18,4 @@ function open_database() {
   else return $pdo;
 }
 ?>
+

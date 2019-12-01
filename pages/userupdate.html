@@ -1,22 +1,20 @@
 <html>
-<head>
-<title> Employee Update Manager Query </title>
-</head>
-<body>
-<form method="post" action="../scripts/update.php">
+  <head>
+    <title>Update</title>
+  </head>
+  <body>
+  <form method="post" action="../scripts/update.php">
     <fieldset>
-      <legend> <strong> Employee Update Manager Query </strong> </legend>
+      <legend><strong>Employee Update Manager Query</strong></legend>
+      <!--- Employee SSN entry -->
+      <label for="SSN">Employee SSN</label><br>
+      <input type="text" name="SSN" minlength="9" maxlength="9" required/><br><br> 
+      <!--- New location for employee -->
+      <label for "Location">New Location</label><br>
+      <input type="text" name="Location" maxlength="20" required/><br><br>
 
-<!-- TODO: New inputs for new query --!>
-<!--------------------------------------------------------------
-<label id="label" for="SSN"> Employee SSN </label></br>
-<input type="text" name="SSN" required> </br></br>
-
-<label id="label" for="MgrSSN"> Manager SSN </label> </br>
-<input type="text" name="MgrSSN" required> </br></br>
--------------------------------------------------------------->
-
-      <input id="button" type="submit" name="submit">
+      <input type="submit">
+      <input type="reset">
    </fieldset>
 
 </body>

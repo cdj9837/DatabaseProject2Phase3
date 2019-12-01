@@ -1,16 +1,18 @@
 <html>
-<head>
-<title> Employee Delete Query </title>
-</head>
-<body>
-<form method="post" action="../scripts/delete.php">
-    <fieldset>
-      <legend> <strong> Employee Delete Query </strong> </legend>
+  <head>
+    <title> Employee Delete Query </title>
+  </head>
+  <body>
+    <form method="post" action="../scripts/delete.php">
+      <fieldset>
+        <legend> <strong> Employee Delete Query </strong> </legend>
 
-<label id="label" for=“SSN"> Employee SSN </label> </br>
-<input type="text" name="SSN"> </br> </br>
+        <label for=“SSN"> Employee SSN </label></br>
+        <input type="text" maxlength="9" name="SSN" required></br></br>
 
-      <input id="button" type="submit" name="submit">
-    </fieldset>
-</body>
+        <input type="submit">
+        <input type="reset">
+      </fieldset>
+    </form>
+  </body>
 </html>
