@@ -1,0 +1,38 @@
+<?php
+require("db_open.php")
+$conn = open_database();
+?>
+
+<html>
+ <head>
+ </head>
+ <body>
+
+<?php
+$query = "SELECT Fname, Lname, Salary
+FROM fulltime_employees
+WHERE Salary<50000";
+
+mysqli_query($conn, $query) or die('Error querying view.');
+$result = mysqli_query($conn, $query);
+
+echo "<table>";
+   echo "<tr>";
+    echo "<th>Fname</th>";
+    echo "<th>Lname</th>";
+    echo "<th>Salary</th>";
+   echo "</tr>";
+ while ($row = mysqli_fetch_array($result))
+ {
+   echo "<tr>";
+    echo "<td>".$row['Fname']."</td>";
+    echo "<td>".$row['Lname']."</td>";
+    echo "<td>".$row['Salary']."</td>";
+   echo "</tr>";
+ }
+echo "</table>";
+mysqli_close($conn);
+?>
+
+</body>
+</html>
