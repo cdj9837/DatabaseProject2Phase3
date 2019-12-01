@@ -1,6 +1,10 @@
 <?php
-require("db_open.php")
-$conn = open_database();
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "scraplunch";
+$conn = mysqli_connect($host,$dbusername,$dbpassword, $dbname)
+or die('Error connecting to MySQL server.');
 ?>
 
 <html>
@@ -13,8 +17,11 @@ $query = "SELECT Fname, Lname, Salary
 FROM fulltime_employees
 WHERE Salary<50000";
 
-mysqli_query($conn, $query) or die('Error querying view.');
+# mysqli_query($conn, $query) or die('Error querying view.');
 $result = mysqli_query($conn, $query);
+
+if (!$result)
+  die('Error querying view: '.$conn->error);
 
 echo "<table>";
    echo "<tr>";

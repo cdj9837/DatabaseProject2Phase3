@@ -1,3 +1,12 @@
+<html>
+  <header>
+    <title>Inserted</title>
+  </header>
+  <form action="../index.html">
+    <input type="submit" value="Go Back"/>
+  </form>
+</html>
+
 <?php
 // open connection to database w/ helper function from yours truly
 require("db_open.php");
@@ -8,7 +17,6 @@ $ssn = filter_input(INPUT_POST, 'SSN');
 $fname = filter_input(INPUT_POST, 'Fname');
 $lname = filter_input(INPUT_POST, 'Lname');
 $location = filter_input(INPUT_POST, 'Location');
-$job = filter_input(INPUT_POST, 'Job');
 $scrap_id = filter_input(INPUT_POST, 'ScrapId');
 
 $query = 'INSERT INTO employee VALUES (?, ?, ?, ?, ?)';
@@ -25,7 +33,7 @@ else {
 
   $result = $sql->execute();
   if (!$result)
-    die('E: Failed to add employee to database\n'.$sql->ErrorInfo()[2]);
+    die('E: Failed to add employee to database  '.$sql->ErrorInfo()[2]);
   else echo 'Successfully added employee to database';
+}
 ?>
-

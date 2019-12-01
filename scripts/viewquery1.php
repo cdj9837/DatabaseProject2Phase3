@@ -1,15 +1,10 @@
 <?php
-/*
-CREATE VIEW fulltime_employees
-AS SELECT E.Fname, E.Lname, E.Scrap_id, F.Salary
-FROM employee as E, fulltime as F
-WHERE E.SSN=F.SSN;
-*/
-?>
-
-<?php
-require("db_open.php")
-$conn = open_database();
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "scraplunch";
+$conn = mysqli_connect($host,$dbusername,$dbpassword, $dbname)
+or die('Error connecting to MySQL server.');
 ?>
 
 <html>
@@ -18,12 +13,19 @@ $conn = open_database();
  <body>
 
 <?php
-$query = "SELECT Fname, Lname
+$query = ("CREATE VIEW fulltime_employees
+AS SELECT E.Fname, E.Lname, E.Scrap_id, F.Salary
+FROM employee as E, fulltime as F
+WHERE E.SSN=F.SSN");
+
+mysqli_query($conn, $query) or die('Error creating view.');
+
+$query2 = "SELECT Fname, Lname
 FROM fulltime_employees
 WHERE Scrap_id=2";
 
-mysqli_query($conn, $query) or die('Error querying view.');
-$result = mysqli_query($conn, $query);
+mysqli_query($conn, $query2) or die('Error querying view.');
+$result = mysqli_query($conn, $query2);
 
 echo "<table>";
    echo "<tr>";

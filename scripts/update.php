@@ -1,5 +1,13 @@
+<html>
+  <header>
+    <title>Updated</title>
+  </header>
+  <form action="../index.html">
+    <input type="submit" value="Go Back"/>
+  </form>
+</html>
 <?php
-require("db_open.php")
+require("db_open.php");
 
 $conn = open_database();
 $ssn = filter_input(INPUT_POST, 'SSN');
@@ -16,7 +24,7 @@ else {
 
   $result = $sql->execute();
   if (!$result)
-    die('E: Failed to update employee data\n'.$sql->ErrorInfo()[2]);
+    die('E: Failed to update employee data  '.$sql->ErrorInfo()[2]);
   else echo 'Successfully updated employee data';
+}
 ?>
-
