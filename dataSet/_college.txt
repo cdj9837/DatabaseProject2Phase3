@@ -1,0 +1,8 @@
+College_ID, Name, Location, Scrap_ID
+UTA', 'University of Texas at Arlington', 'Texas', 1
+UTD', 'University of Texas at Dallas', 'Texas', 2
+UT', 'University of Texas Austin', 'Texas', 3
+UTSA', 'University of Texas at San Antonio', 'Texas', 4
+A&M, A&M University, Texas, 5
+TWU, Texas Womans University, Texas, 6
+UNT, University of North Texas,Texas, 7

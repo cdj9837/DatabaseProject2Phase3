@@ -1,0 +1,5 @@
+BinId, Type
+1, Plastic
+2, Paper
+3, Glass
+4, Aluminium

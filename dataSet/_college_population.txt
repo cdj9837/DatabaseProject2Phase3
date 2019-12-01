@@ -1,0 +1,5 @@
+Person_id, UniversityID, typeKey
+009009009, UTA, 1
+009009008, UTD, 2
+009009007, UT, 1
+009009006, TWU, 2

@@ -1,0 +1,5 @@
+manName, PartNo, Name, scrapId, Type
+Man1, 1, Scanner, 1, typescan
+Man2, 2, Scale, 6, Scale
+Man3, 3, thingamajig, 4, camera
+Man4, 4, dohicky, 5, processing chip
