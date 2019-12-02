@@ -13,12 +13,9 @@ or die('Error connecting to MySQL server.');
  <body>
 
 <?php
-$query = "SELECT *
-FROM fulltime_employees
-WHERE Scrap_id=2";
+$query = "SELECT * FROM fulltime_employees";
 
 $result = mysqli_query($conn, $query);
-
 if (!$result)
   die('Error querying view: '.$conn->error);
 

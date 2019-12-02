@@ -13,7 +13,7 @@ or die('Error connecting to MySQL server.');
  <body>
 
 <?php
-$query = "SELECT Fname, Lname, Salary
+$query = "SELECT *
 FROM fulltime_employees
 WHERE Salary<50000";
 
@@ -27,6 +27,7 @@ echo "<table>";
    echo "<tr>";
     echo "<th>Fname</th>";
     echo "<th>Lname</th>";
+    echo "<th>Scrap_id</th>";
     echo "<th>Salary</th>";
    echo "</tr>";
  while ($row = mysqli_fetch_array($result))
@@ -34,6 +35,7 @@ echo "<table>";
    echo "<tr>";
     echo "<td>".$row['Fname']."</td>";
     echo "<td>".$row['Lname']."</td>";
+    echo "<td>".$row['Scrap_id']."</td>";
     echo "<td>".$row['Salary']."</td>";
    echo "</tr>";
  }
